@@ -20,7 +20,6 @@ call vundle#end()
 filetype plugin indent on
 
 " Tab control
-set smarttab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
