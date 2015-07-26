@@ -1,6 +1,6 @@
 echo "Uninstalling dotfiles..."
 
-DOTFOLDER="$HOME/dotfiles"
+DOTFOLDER="$HOME/.dotfiles"
 VIMRC=".vimrc"
 ZSHRC=".zshrc"
 TMUXCONF=".tmux.conf"
