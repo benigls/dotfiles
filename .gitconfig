@@ -4,3 +4,5 @@
 	username = benigls
 [push]
 	default = simple
+[core]
+    editor = vim
