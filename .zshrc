@@ -19,6 +19,15 @@ setopt hist_ignore_space
 
 ###  Aliases ###
 
+#zsh
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+alias ll='ls -la'
+
+
 # tmux
 alias tmux='tmux -2'
 alias ta='tmux attach'
