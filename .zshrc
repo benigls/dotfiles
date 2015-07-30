@@ -10,7 +10,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 PROMPT=$'%n at %m %~\n➔ '
 
 # History
-HISTFILE='$HOME/.zsh_history'
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
 setopt hist_ignore_all_dups
