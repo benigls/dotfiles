@@ -27,10 +27,12 @@ alias .....='cd ../../../..'
 
 alias ll='ls -la'
 
-
 # tmux
 alias tmux='tmux -2'
 alias ta='tmux attach'
 alias tls='tmux ls'
 alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
