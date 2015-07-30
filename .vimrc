@@ -63,6 +63,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Automatically removing all trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 " NERDTree
 let g:NERDTreeQuitOnOpen=0
 let NERDTreeShowHidden=1
