@@ -13,8 +13,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'chriskempson/base16-vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
-" Plugin 'Townk/vim-autoclose'
 Plugin 'Raimondi/delimitMate'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype plugin indent on
