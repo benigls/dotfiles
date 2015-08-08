@@ -66,6 +66,9 @@ set noswapfile
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Normal mode map ; to :
+nnoremap ; :
+
 " NERDTree
 let g:NERDTreeQuitOnOpen=0
 let NERDTreeShowHidden=1
