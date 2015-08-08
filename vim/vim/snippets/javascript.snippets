@@ -1,0 +1,33 @@
+snippet gis
+	getInitialState: function() {
+		return (
+			${1}: ${2}
+		);
+	},
+snippet jsx
+	/** @jsx React.DOM */
+snippet rcc
+	/** @jsx React.DOM */
+
+	var React = require('react');
+
+	var ${1:ClassName} = React.createClass({
+
+		render: function() {
+			return (
+				${0:<div />}
+			);
+		}
+	});
+
+	module.exports = $1;
+snippet ren
+	render: function() {
+		return (
+			${0:<div />}
+		);
+	}
+snippet props
+	this.props.${1}
+snippet state
+	this.state.${1}
