@@ -1,23 +1,29 @@
 filetype off
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Let vundle manage itself
 Plugin 'gmarik/vundle'
+
+" Utilities
 Plugin 'mattn/emmet-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'benmills/vimux'
-" Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/syntastic'
-Plugin 'chriskempson/base16-vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'Raimondi/delimitMate'
-Plugin 'pangloss/vim-javascript'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+
+" Colorscheme
+Plugin 'chriskempson/base16-vim'
+
+" JavaScript
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype plugin indent on
@@ -71,6 +77,13 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Normal mode map ; to :
 nnoremap ; :
+
+" Toggle invisible characters
+set invlist
+set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+highlight SpecialKey ctermbg=none " make the highlighting of tabs less annoying
+set showbreak=↪
+" nmap <leader>l :set list!<cr>
 
 " NERDTree
 let g:NERDTreeQuitOnOpen=0
