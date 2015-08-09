@@ -7,7 +7,7 @@
 [core]
     editor = vim
 [alias]
-    a = add .
+    a = add . --all
     aa = add
 
     s = status --short
