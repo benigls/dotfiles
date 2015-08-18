@@ -14,5 +14,6 @@ rm $HOME/$VIMRC
 rm $HOME/$ZSHRC
 rm $HOME/$TMUXCONF
 rm $HOME/$GITCONF
+rm -rf $HOME/.vim
 
 echo "All dotfiles uninstalled"
