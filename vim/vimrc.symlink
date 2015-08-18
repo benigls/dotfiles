@@ -88,7 +88,8 @@ let g:NERDTreeQuitOnOpen=0
 let NERDTreeShowHidden=1
 
 " ctrlp
-let g:ctrl_dotfiles=1
+let g:ctrlp_show_hidden=1
+let g:ctrlp_custom_ignore = '.git\|node_modules\|bower_components\|__pycache__\|tmp\'
 
 " Airline
 let g:airline_powerline_fonts = 1
