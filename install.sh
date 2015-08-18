@@ -7,7 +7,6 @@ git submodule update --init --recursive
 
 DOTFOLDER="$HOME/.dotfiles"
 ZSHRC=".zshrc"
-TMUXCONF=".tmux.conf"
 GITCONF=".gitconfig"
 DIR=""
 
@@ -35,9 +34,6 @@ done
 
 cp $ZSHRC $DOTFOLDER
 ln -s $DOTFOLDER/$ZSHRC $HOME/$ZSHRC
-
-cp $TMUXCONF $DOTFOLDER
-ln -s $DOTFOLDER/$TMUXCONF $HOME/$TMUXCONF
 
 cp $GITCONF $DOTFOLDER
 ln -s $DOTFOLDER/$GITCONF $HOME/$GITCONF
