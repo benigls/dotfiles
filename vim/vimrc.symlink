@@ -62,9 +62,6 @@ colorscheme base16-default
 
 set number
 
-set linebreak
-set showbreak=...
-
 set autoindent
 set smartindent
 
@@ -79,10 +76,11 @@ autocmd BufWritePre * :%s/\s\+$//e
 nnoremap ; :
 
 " Toggle invisible characters
+set linebreak
 set invlist
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 highlight SpecialKey ctermbg=none " make the highlighting of tabs less annoying
-set showbreak=↪
+set showbreak=...
 " nmap <leader>l :set list!<cr>
 
 " NERDTree
