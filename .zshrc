@@ -4,7 +4,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 
 # virtualenvwrapper settings
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv-3.4`
+export VIRTUALENV_PYTHON=`which python3`
+export VIRTUALENVWRAPPER_PYTHON=`which python3`
 source /usr/local/bin/virtualenvwrapper.sh
 
 PROMPT=$'%n at %m %~\n➔ '
