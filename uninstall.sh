@@ -5,6 +5,7 @@ VIMRC=".vimrc"
 ZSHRC=".zshrc"
 TMUXCONF=".tmux.conf"
 GITCONF=".gitconfig"
+CONFIG="base16-shell" #TODO: Make it flexible when their are many config folder.
 
 if [ -d "$DOTFOLDER" ]; then
     rm -rf "$DOTFOLDER"
