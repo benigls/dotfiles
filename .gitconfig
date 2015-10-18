@@ -34,3 +34,7 @@
     ps = push
 
     us = reset HEAD
+
+    st = stash
+    stl = stash list
+    stc = stash clear
