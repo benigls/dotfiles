@@ -38,3 +38,7 @@ alias tns='tmux new-session -s'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+
+# Anaconda
+export PATH=/home/vagrant/anaconda3/bin:$PATH
