@@ -40,6 +40,6 @@ cp $GITCONF $DOTFOLDER
 ln -s $DOTFOLDER/$GITCONF $HOME/$GITCONF
 
 echo "Instaling config files."
-cp -r .config/* $HOME/.config/
+cp -r config/* $HOME/.config/
 
 echo "All dotfiles installed"
