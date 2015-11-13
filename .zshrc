@@ -39,6 +39,25 @@ alias tns='tmux new-session -s'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-
 # Anaconda
 export PATH=/home/vagrant/anaconda3/bin:$PATH
+
+export VAGRANT_FOLDER="$HOME/Code/Vagrant/"
+
+# run a vagrant machine
+vag() {
+    vagrant_path="$VAGRANT_FOLDER/$1"
+
+    # TODO: Check the passed args
+
+    if [ -d $vagrant_path ]; then
+        cd $vagrant_path
+        vagrant up && vagrant ssh
+    else
+        echo "$1 doesn't exist."
+        echo "Here's the list of available machines."
+        ls $VAGRANT_FOLDER
+    fi
+
+    unset vagrant_path
+}
