@@ -6,7 +6,6 @@ echo "Initializing submodule(s)"
 git submodule update --init --recursive
 
 DOTFOLDER="$HOME/.dotfiles"
-ZSHRC=".zshrc"
 GITCONF=".gitconfig"
 DIR=""
 
@@ -30,16 +29,12 @@ for file in $linkables ; do
     ln -s $DOTFOLDER/$name $target
 
     DIR=""
-
 done
-
-cp $ZSHRC $DOTFOLDER
-ln -s $DOTFOLDER/$ZSHRC $HOME/$ZSHRC
 
 cp $GITCONF $DOTFOLDER
 ln -s $DOTFOLDER/$GITCONF $HOME/$GITCONF
 
-echo "Instaling config files."
+echo "Instaling .config files."
 cp -r config/* $HOME/.config/
 
 echo "All dotfiles installed"
