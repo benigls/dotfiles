@@ -1,5 +1,5 @@
 echo "Uninstalling dotfiles..."
-
+# TODO: Refactor this. Reverse the process of installation.
 DOTFOLDER="$HOME/.dotfiles"
 VIMRC=".vimrc"
 ZSHRC=".zshrc"
