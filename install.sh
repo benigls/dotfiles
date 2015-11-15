@@ -7,28 +7,19 @@ git submodule update --init --recursive
 
 DOTFOLDER="$HOME/.dotfiles"
 GITCONF=".gitconfig"
-DIR=""
 
 if [ ! -d "$DOTFOLDER" ]; then
-    mkdir "$DOTFOLDER"
+    cp -r ../dotfiles $DOTFOLDER
 fi
 
 echo "Creating symlinks"
 linkables=$( ls -1 -d **/*.symlink )
 
 for file in $linkables ; do
-    name="$( basename $file ".symlink" )"
-    target="$HOME/.$name"
+    target="$HOME/.$( basename $file ".symlink" )"
     echo "Creating symlink for $file"
 
-    if [ -d "$file" ] ; then
-       DIR="-r"
-    fi
-
-    cp $DIR $file $DOTFOLDER/$name
-    ln -s $DOTFOLDER/$name $target
-
-    DIR=""
+    ln -s $DOTFOLDER/$file $target
 done
 
 cp $GITCONF $DOTFOLDER
