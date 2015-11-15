@@ -48,15 +48,20 @@ export VAGRANT_FOLDER="$HOME/Code/Vagrant/"
 vag() {
     vagrant_path="$VAGRANT_FOLDER/$1"
 
-    # TODO: Check the passed args
-
-    if [ -d $vagrant_path ]; then
-        cd $vagrant_path
-        vagrant up && vagrant ssh
+    if [ "$#" -gt 1 ]; then
+        echo "Too many machine name. It requires only 1."
+    elif [ ! "$@" ]; then
+        echo "You didn't passed the machine name."
     else
-        echo "$1 doesn't exist."
-        echo "Here's the list of available machines."
-        ls $VAGRANT_FOLDER
+        if [ -d $vagrant_path ]; then
+            cd $vagrant_path
+            vagrant up && vagrant ssh
+        else
+            # TODO: Pretify the message.
+            echo "$1 doesn't exist.\n"
+            echo "Here's the list of available machines."
+            ls $VAGRANT_FOLDER
+        fi
     fi
 
     unset vagrant_path
