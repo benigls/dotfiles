@@ -8,14 +8,14 @@ GITCONF=".gitconfig"
 CONFIG=".config/base16-shell" #TODO: Make it flexible when their are many config folder.
 
 if [ -d "$DOTFOLDER" ]; then
-    rm -rf "$DOTFOLDER"
+    rmf "$DOTFOLDER"
 fi
 
 rm $HOME/$VIMRC
 rm $HOME/$ZSHRC
 rm $HOME/$TMUXCONF
 rm $HOME/$GITCONF
-rm -rf $HOME/.vim
-rm -rf $HOME/$CONFIG
+rmf $HOME/.vim
+rmf $HOME/$CONFIG
 
 echo "All dotfiles uninstalled"
