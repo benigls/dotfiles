@@ -18,16 +18,21 @@ SAVEHIST=10000
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
-
 ###  Aliases ###
 
-#zsh
+# reload zsh config
+alias reload!="source ~/.zshrc"
+
+# File system
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
-alias ll='ls -la'
+alias l="ls -la"
+alias ll="ls -l"
+alias rmf="rm -rf"
+
 
 # tmux
 alias tmux='tmux -2'
@@ -44,14 +49,14 @@ export PATH=/home/vagrant/anaconda3/bin:$PATH
 
 export VAGRANT_FOLDER="$HOME/Code/Vagrant/"
 
-# run a vagrant machine
+# Run a vagrant machine
 vag() {
     vagrant_path="$VAGRANT_FOLDER/$1"
 
     if [ "$#" -gt 1 ]; then
         echo "Too many machine name. It requires only 1."
     elif [ ! "$@" ]; then
-        echo "You didn't passed the machine name."
+        echo "You didn't pass the machine name."
     else
         if [ -d $vagrant_path ]; then
             cd $vagrant_path
@@ -65,4 +70,15 @@ vag() {
     fi
 
     unset vagrant_path
+}
+
+# Create a new directorty and enter it.
+md() {
+    if [ "$#" -gt 1 ]; then
+        echo "Too many directory name. It requires only 1."
+    elif [ ! "$@" ]; then
+        echo "You didn't pass the directory name."
+    else
+        mkdir -p "$1" && cd "$1"
+    fi
 }
