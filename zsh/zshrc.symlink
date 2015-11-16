@@ -1,17 +1,22 @@
-export DOTFILES=$HOME/.dotfiles
-export ZSH=$DOTFILES/zsh
+export DOTFILES="$HOME/.dotfiles"
+export ZSH="$DOTFILES/zsh"
 export VAGRANT_FOLDER="$HOME/Code/Vagrant/"
+export EDITOR="vim"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Base16 Shell
-if [ -z "$BACKGROUND" ]; then
+if [ -z $THEME ]; then
+    export THEME="default"
+fi
+
+if [ -z $BACKGROUND ]; then
     export BACKGROUND="dark"
 fi
 
-export BASE16_SHELL="$HOME/.config/base16-shell/base16-default.$BACKGROUND.sh"
+export BASE16_SHELL="$HOME/.config/base16-shell/base16-$THEME.$BACKGROUND.sh"
 source $BASE16_SHELL
 
 # load all zsh config files
