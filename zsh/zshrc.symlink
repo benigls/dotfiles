@@ -19,6 +19,9 @@ fi
 export BASE16_SHELL="$HOME/.config/base16-shell/base16-$THEME.$BACKGROUND.sh"
 source $BASE16_SHELL
 
+# tmux
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
 # load all zsh config files
 for config ($ZSH/**/*.zsh)
     source $config
