@@ -32,11 +32,22 @@ function md() {
     fi
 }
 
-# set the background color
+# set the background color and them
+# TODO: Fix this shit
 function light() {
     export BACKGROUND="light" && reload!
 }
 
 function dark() {
     export BACKGROUND="dark" && reload!
+}
+
+function theme() {
+    if [ "$#" -gt 1 ]; then
+        echo "Too many theme name. It requires only 1."
+    elif [ ! "$@" ]; then
+        echo "You didn't pass the theme name."
+    else
+        export THEME=$1 && reload!
+    fi
 }
