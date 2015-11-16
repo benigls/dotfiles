@@ -14,7 +14,7 @@ function vag() {
             # TODO: Pretify the message.
             echo "$1 doesn't exist.\n"
             echo "Here's the list of available machines."
-            ls $VAGRANT_FOLDER
+            ls -1 $VAGRANT_FOLDER
         fi
     fi
 
