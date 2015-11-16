@@ -1,15 +1,9 @@
-# heavily inspired by the wonderful pure theme
-# https://github.com/sindresorhus/pure
-
-# needed to get things like current git branch
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git # You can add hg too if needed: `git hg`
+zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' use-simple true
 zstyle ':vcs_info:git*' max-exports 2
 zstyle ':vcs_info:git*' formats ' %b' 'x%R'
 zstyle ':vcs_info:git*' actionformats ' %b|%a' 'x%R'
-
-autoload colors && colors
 
 git_dirty() {
     # check if we're in a git repo
@@ -63,9 +57,9 @@ suspended_jobs() {
 
 precmd() {
     vcs_info
-    print -P '\n%F{205}%~'
+    print -P '%F{215}%n%f %F{241}at%f %F{215}%m%f %F{111}%~%f'
 }
 
-# PROMPT=$'%n at %m %~\n '
-export PROMPT='%(?.%F{205}.%F{red})➔ %f '
+#TODO: Update color.
+export PROMPT='%F{111}➔ %f'
 export RPROMPT='`git_dirty`%F{241}$vcs_info_msg_0_%f `git_arrows``suspended_jobs`'
