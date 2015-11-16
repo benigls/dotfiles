@@ -1,0 +1,40 @@
+[user]
+	email = iglesia.ben@gmail.com
+	name = Ben
+	username = benigls
+[push]
+	default = simple
+[core]
+    editor = vim
+[alias]
+    a = add . --all
+    aa = add
+
+    s = status --short
+    ss = status
+
+    c = commit -m
+    ca = commit -am
+    ci = commit
+
+    b = branch
+    co = checkout
+    cob = checkout -b
+
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ln = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+
+    df = diff
+    dfc = diff --cached
+
+    cl = clone
+
+    pl = pull
+
+    ps = push
+
+    us = reset HEAD
+
+    st = stash
+    stl = stash list
+    stc = stash clear
