@@ -5,6 +5,8 @@ echo "Installing dotfiles..."
 echo "Initializing submodule(s)"
 git submodule update --init --recursive
 
+export DOTFILES="$HOME/.dotfiles"
+
 if [ ! -d $DOTFILES ]; then
     cp -r ../dotfiles $DOTFILES
 fi
