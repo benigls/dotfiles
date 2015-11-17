@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "Uninstalling dotfiles..."
+cd ..
 
 if [ -d $DOTFILES ]; then
     rm -rf $DOTFILES
