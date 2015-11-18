@@ -1,24 +1,76 @@
-# Run a vagrant machine
-function vag() {
-    vagrant_path="$VAGRANT_FOLDER/$1"
+# Check the args if it has only 1 arg.
+#function __check_args(1) {
+#}
 
+# Show the list of available vm
+# TODO: Pretify the message.
+function lsvm() {
+    ls -1 $VAGRANT_FOLDER
+}
+
+# cd to a vm
+function cdvm() {
     if [ "$#" -gt 1 ]; then
-        echo "Too many machine name. It requires only 1."
+        echo "Too many argument. It requires only 1."
     elif [ ! "$@" ]; then
-        echo "You didn't pass the machine name."
+        echo "You didn't pass an argument."
     else
-        if [ -d $vagrant_path ]; then
-            cd $vagrant_path
-            vagrant up && vagrant ssh
+        if [ -d $VAGRANT_FOLDER/$1 ]; then
+            cd $VAGRANT_FOLDER/$1
         else
-            # TODO: Pretify the message.
             echo "$1 doesn't exist.\n"
             echo "Here's the list of available machines."
-            ls -1 $VAGRANT_FOLDER
+            lsvm
+       fi
+    fi
+}
+
+# ssh into a vagrant vm
+function sshvm() {
+    if [ "$#" -gt 1 ]; then
+        echo "Too many argument. It requires only 1."
+    elif [ ! "$@" ]; then
+        echo "You didn't pass an argument."
+    else
+        if [ -d $VAGRANT_FOLDER/$1 ]; then
+            cd $VAGRANT_FOLDER/$1
+            vagrant ssh
+        else
+            echo "$1 doesn't exist.\n"
+            echo "Here's the list of available machines."
+            lsvm
         fi
     fi
+}
 
-    unset vagrant_path
+# up a vagrant vm
+function upvm() {
+    if [ "$#" -gt 1 ]; then
+        echo "Too many argument. It requires only 1."
+    elif [ ! "$@" ]; then
+        echo "You didn't pass an argument."
+    else
+        if [ -d $VAGRANT_FOLDER/$1 ]; then
+            cd $VAGRANT_FOLDER/$1
+            vagrant up
+        else
+            echo "$1 doesn't exist.\n"
+            echo "Here's the list of available machines."
+            lsvm
+        fi
+    fi
+}
+
+# up and ssh into a vm
+function runvm() {
+    if [ -d $VAGRANT_FOLDER/$1]; then
+        cd $VAGRANT_FOLDER/$1
+        vagrant up && vagrant ssh
+    else
+        echo "$1 doesn't exist.\n"
+        echo "Here's the list of available machines."
+        lsvm
+    fi
 }
 
 # Create a new directorty and enter it.
