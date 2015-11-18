@@ -62,4 +62,4 @@ bind-key -t vi-copy 'y' copy-selection
 bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
 
 # Color and Style settings
-source $DOTFILES/tmux/theme.sh
+# source $DOTFILES/tmux/theme.sh
