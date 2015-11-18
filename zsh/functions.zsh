@@ -1,13 +1,3 @@
-# Check the args if it has only 1 arg.
-#function __check_args(1) {
-#}
-
-# Show the list of available vm
-# TODO: Pretify the message.
-function lsvm() {
-    ls -1 $VAGRANT_FOLDER
-}
-
 # cd to a vm
 function cdvm() {
     if [ "$#" -gt 1 ]; then
