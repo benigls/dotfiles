@@ -63,13 +63,19 @@ function upvm() {
 
 # up and ssh into a vm
 function runvm() {
-    if [ -d $VAGRANT_FOLDER/$1]; then
-        cd $VAGRANT_FOLDER/$1
-        vagrant up && vagrant ssh
+    if [ "$#" -gt 1 ]; then
+        echo "Too many argument. It requires only 1."
+    elif [ ! "$@" ]; then
+        echo "You didn't pass an argument."
     else
-        echo "$1 doesn't exist.\n"
-        echo "Here's the list of available machines."
-        lsvm
+        if [ -d $VAGRANT_FOLDER/$1 ]; then
+            cd $VAGRANT_FOLDER/$1
+            vagrant up && vagrant ssh
+        else
+            echo "$1 doesn't exist.\n"
+            echo "Here's the list of available machines."
+            lsvm
+        fi
     fi
 }
 
