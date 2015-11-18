@@ -79,6 +79,23 @@ function runvm() {
     fi
 }
 
+# quickly cd to repos
+function cdr() {
+    if [ "$#" -gt 1 ]; then
+        echo "Too many argument. It requires only 1."
+    elif [ ! "$@" ]; then
+        echo "You didn't pass an argument."
+    else
+        if [ -d $REPO_FOLDER/$1 ]; then
+            cd $REPO_FOLDER/$1
+        else
+            echo "$1 doesn't exist.\n"
+            echo "Here's the list of available repositories."
+            llr
+        fi
+    fi
+}
+
 # Create a new directorty and enter it.
 function md() {
     if [ "$#" -gt 1 ]; then
