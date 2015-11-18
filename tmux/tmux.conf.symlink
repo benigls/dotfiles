@@ -48,10 +48,10 @@ bind -r K resize-pane -U 2
 bind -r L resize-pane -R 3
 
 # Use Alt-vim keys without prefix key to switch panes
-bind -n M-h select-pane -L
-bind -n M-j select-pane -D
-bind -n M-k select-pane -U
-bind -n M-l select-pane -R
+# bind -n M-h select-pane -L
+# bind -n M-j select-pane -D
+# bind -n M-k select-pane -U
+# bind -n M-l select-pane -R
 
 # Vi copypaste mode
 set-window-option -g mode-keys vi

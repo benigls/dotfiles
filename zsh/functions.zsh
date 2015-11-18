@@ -1,4 +1,4 @@
-# cd to a vm
+# cd into vm
 function cdvm() {
     if [ "$#" -gt 1 ]; then
         echo "Too many argument. It requires only 1."
@@ -15,7 +15,7 @@ function cdvm() {
     fi
 }
 
-# ssh into a vagrant vm
+# ssh into vm
 function sshvm() {
     if [ "$#" -gt 1 ]; then
         echo "Too many argument. It requires only 1."
@@ -33,7 +33,7 @@ function sshvm() {
     fi
 }
 
-# up a vagrant vm
+# up vm
 function upvm() {
     if [ "$#" -gt 1 ]; then
         echo "Too many argument. It requires only 1."
@@ -51,7 +51,25 @@ function upvm() {
     fi
 }
 
-# up and ssh into a vm
+# halt vm
+function haltvm() {
+    if [ "$#" -gt 1 ]; then
+        echo "Too many argument. It requires only 1."
+    elif [ ! "$@" ]; then
+        echo "You didn't pass an argument."
+    else
+        if [ -d $VAGRANT_FOLDER/$1 ]; then
+            cd $VAGRANT_FOLDER/$1
+            vagrant halt
+        else
+            echo "$1 doesn't exist.\n"
+            echo "Here's the list of available machines."
+            lsvm
+        fi
+    fi
+}
+
+# up and ssh into vm
 function runvm() {
     if [ "$#" -gt 1 ]; then
         echo "Too many argument. It requires only 1."
