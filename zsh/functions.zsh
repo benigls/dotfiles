@@ -34,7 +34,7 @@ function sshvm() {
         else
             echo "$1 doesn't exist.\n"
             echo "Here's the list of available machines."
-            lsvm
+            llv
         fi
     fi
 }
@@ -48,7 +48,7 @@ function upvm() {
         else
             echo "$1 doesn't exist.\n"
             echo "Here's the list of available machines."
-            lsvm
+            llv
         fi
     fi
 }
@@ -62,7 +62,7 @@ function haltvm() {
         else
             echo "$1 doesn't exist.\n"
             echo "Here's the list of available machines."
-            lsvm
+            llv
         fi
     fi
 }
@@ -76,7 +76,7 @@ function runvm() {
         else
             echo "$1 doesn't exist.\n"
             echo "Here's the list of available machines."
-            lsvm
+            llv
         fi
     fi
 }
