@@ -1,27 +1,33 @@
+# check args if it's only 1. 1 = error, 2 = accepted
+function __check_args() {
+    if [ $# -gt 1 ]; then
+        echo "Too many argument. It requires only 1."
+        return 1
+    elif [ ! $@ ]; then
+        echo "You didn't pass an argument."
+        return 1
+    else
+        return 0
+    fi
+
+}
+
 # cd into vm
 function cdvm() {
-    if [ "$#" -gt 1 ]; then
-        echo "Too many argument. It requires only 1."
-    elif [ ! "$@" ]; then
-        echo "You didn't pass an argument."
-    else
+    if __check_args $@ ; then
         if [ -d $VAGRANT_FOLDER/$1 ]; then
             cd $VAGRANT_FOLDER/$1
         else
             echo "$1 doesn't exist.\n"
             echo "Here's the list of available machines."
-            lsvm
+            llv
        fi
     fi
 }
 
 # ssh into vm
 function sshvm() {
-    if [ "$#" -gt 1 ]; then
-        echo "Too many argument. It requires only 1."
-    elif [ ! "$@" ]; then
-        echo "You didn't pass an argument."
-    else
+    if __check_args $@ ; then
         if [ -d $VAGRANT_FOLDER/$1 ]; then
             cd $VAGRANT_FOLDER/$1
             vagrant ssh
@@ -35,11 +41,7 @@ function sshvm() {
 
 # up vm
 function upvm() {
-    if [ "$#" -gt 1 ]; then
-        echo "Too many argument. It requires only 1."
-    elif [ ! "$@" ]; then
-        echo "You didn't pass an argument."
-    else
+    if __check_args $@ ; then
         if [ -d $VAGRANT_FOLDER/$1 ]; then
             cd $VAGRANT_FOLDER/$1
             vagrant up
@@ -53,11 +55,7 @@ function upvm() {
 
 # halt vm
 function haltvm() {
-    if [ "$#" -gt 1 ]; then
-        echo "Too many argument. It requires only 1."
-    elif [ ! "$@" ]; then
-        echo "You didn't pass an argument."
-    else
+    if __check_args $@ ; then
         if [ -d $VAGRANT_FOLDER/$1 ]; then
             cd $VAGRANT_FOLDER/$1
             vagrant halt
@@ -71,11 +69,7 @@ function haltvm() {
 
 # up and ssh into vm
 function runvm() {
-    if [ "$#" -gt 1 ]; then
-        echo "Too many argument. It requires only 1."
-    elif [ ! "$@" ]; then
-        echo "You didn't pass an argument."
-    else
+    if __check_args $@ ; then
         if [ -d $VAGRANT_FOLDER/$1 ]; then
             cd $VAGRANT_FOLDER/$1
             vagrant up && vagrant ssh
@@ -89,11 +83,7 @@ function runvm() {
 
 # quickly cd to repos
 function cdr() {
-    if [ "$#" -gt 1 ]; then
-        echo "Too many argument. It requires only 1."
-    elif [ ! "$@" ]; then
-        echo "You didn't pass an argument."
-    else
+    if __check_args $@ ; then
         if [ -d $REPO_FOLDER/$1 ]; then
             cd $REPO_FOLDER/$1
         else
@@ -106,11 +96,7 @@ function cdr() {
 
 # Create a new directorty and enter it.
 function md() {
-    if [ "$#" -gt 1 ]; then
-        echo "Too many directory name. It requires only 1."
-    elif [ ! "$@" ]; then
-        echo "You didn't pass the directory name."
-    else
+    if __check_args $@ ; then
         mkdir -p "$1" && cd "$1"
     fi
 }
