@@ -4,27 +4,27 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Let vundle manage itself
-Plugin 'gmarik/vundle'
+Plug 'gmarik/vundle'
 
 " Utilities
-Plugin 'mattn/emmet-vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-commentary'
-Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-surround'
-Plugin 'Raimondi/delimitMate'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'chase/vim-ansible-yaml'
+Plug 'mattn/emmet-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'scrooloose/syntastic'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-surround'
+Plug 'Raimondi/delimitMate'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'chase/vim-ansible-yaml'
 
 " Colorscheme
-Plugin 'chriskempson/base16-vim'
+Plug 'chriskempson/base16-vim'
 
 " JavaScript
-Plugin 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype plugin indent on
