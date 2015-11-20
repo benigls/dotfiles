@@ -18,6 +18,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'chase/vim-ansible-yaml'
 
 " Colorscheme
 Plugin 'chriskempson/base16-vim'
