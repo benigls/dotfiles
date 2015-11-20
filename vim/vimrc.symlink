@@ -1,32 +1,6 @@
-filetype off
+" Load plugins from vim-plug
+source ~/.vim/plugins.vim
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Let vundle manage itself
-Plug 'gmarik/vundle'
-
-" Utilities
-Plug 'mattn/emmet-vim'
-Plug 'kien/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-commentary'
-Plug 'scrooloose/syntastic'
-Plug 'bling/vim-airline'
-Plug 'tpope/vim-surround'
-Plug 'Raimondi/delimitMate'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'chase/vim-ansible-yaml'
-
-" Colorscheme
-Plug 'chriskempson/base16-vim'
-
-" JavaScript
-Plug 'pangloss/vim-javascript'
-
-call vundle#end()
 filetype plugin indent on
 
 " Tab control
