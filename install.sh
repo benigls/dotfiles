@@ -8,7 +8,8 @@ git submodule update --init --recursive
 export DOTFILES="$HOME/.dotfiles"
 
 if [ ! -d $DOTFILES ]; then
-    cp -r ../dotfiles $DOTFILES
+    mkdir $DOTFILES
+    cp -r ./ $DOTFILES
 fi
 
 echo "Creating symlinks"
