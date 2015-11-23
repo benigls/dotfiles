@@ -22,6 +22,10 @@ for file in $linkables ; do
 done
 
 echo "Instaling .config files."
+
+if [ ! -d $HOME/.config ]; then
+    mkdir $HOME/.config
+fi
 cp -r config/* $HOME/.config/
 
 echo "All dotfiles are installed."
