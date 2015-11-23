@@ -7,6 +7,8 @@ linkables=$( ls -1 -d **/*.symlink )
 
 for file in $linkables ; do
     target="$HOME/.$( basename $file ".symlink" )"
+
+    echo "Removing $( basename $target)."
     rm -rf $target
 done
 
@@ -20,7 +22,6 @@ for file in $configs ; do
     rm -rf $target
 done
 
-cd ..
 if [ -d $DOTFILES ]; then
     rm -rf $DOTFILES
 fi
