@@ -29,9 +29,6 @@ source $BASE16_SHELL
 for config ($ZSH/**/*.zsh)
     source $config
 
-# Anaconda
-export PATH=/home/vagrant/anaconda3/bin:$PATH
-
 # virtualenvwrapper settings
 if [ -s "$HOME/.virtualenvs" ]; then
     export WORKON_HOME=$HOME/.virtualenvs
