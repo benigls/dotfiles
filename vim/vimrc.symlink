@@ -102,3 +102,9 @@ let g:syntastic_python_python_exec = '/usr/bin/python'
 
 " Emmet
 let g:user_emmet_leader_key='<C-D>'
+
+" fugitive git bindings
+nnoremap <space>gs :Gstatus<CR>
+nnoremap <space>gd :Gdiff<CR>
+nnoremap <space>gps :Dispatch! git push<CR>
+nnoremap <space>gpl :Dispatch! git pull<CR>
