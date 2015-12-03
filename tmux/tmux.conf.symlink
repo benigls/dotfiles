@@ -19,6 +19,7 @@ bind C-a send-prefix
 
 # make window/pane index start with 1
 set -g base-index 1
+set -g pane-base-index 1
 
 # make delay shorter
 set -sg escape-time 0
