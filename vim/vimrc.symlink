@@ -30,15 +30,17 @@ set showmatch
 syntax on
 
 set encoding=utf8
-let base16colorspace=256
 set t_Co=256
 set background=dark
+let base16colorspace=256
 colorscheme base16-default
 
 set number
 
 set autoindent
 set smartindent
+set colorcolumn=80
+set laststatus=2
 
 set nobackup
 set nowritebackup
