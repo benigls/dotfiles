@@ -12,9 +12,6 @@ alias ll="ls -l"
 alias llr="ls -1 $REPO_FOLDER"
 alias llv="ls -1 $VAGRANT_FOLDER"
 
-alias cdr="cd $REPO_FOLDER"
-alias cdv="cd $VAGRANT_FOLDER"
-
 alias rmf="rm -rf"
 
 # apt-get

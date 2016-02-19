@@ -60,6 +60,8 @@ function haltvm() {
             cd $VAGRANT_FOLDER/$1
             vagrant halt
         else
+            cd $VAGRANT_FOLDER
+            echo "You are redirected to $VAGRANT_FOLDER"
             echo "$1 doesn't exist.\n"
             echo "Here's the list of available machines."
             llv
@@ -87,6 +89,8 @@ function cdr() {
         if [ -d $REPO_FOLDER/$1 ]; then
             cd $REPO_FOLDER/$1
         else
+            cd $REPO_FOLDER
+            echo "You are redirected to $REPO_FOLDER"
             echo "$1 doesn't exist.\n"
             echo "Here's the list of available repositories."
             llr
