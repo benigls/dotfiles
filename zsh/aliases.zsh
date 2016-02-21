@@ -21,3 +21,5 @@ alias rem="sudo apt-get remove --purge "
 alias upd="sudo apt-get update"
 alias upg="sudo apt-get upgrade"
 alias up="upd && upg"
+
+alias v="vim"
