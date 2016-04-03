@@ -28,4 +28,6 @@ if [ ! -d $HOME/.config ]; then
 fi
 cp -r config/* $HOME/.config/
 
+vim +PlugInstall +qall
+
 echo "All dotfiles are installed."
