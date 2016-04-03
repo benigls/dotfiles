@@ -12,14 +12,14 @@ export NVM_DIR="$HOME/.nvm"
 
 # Base16 Shell
 if [ -z $THEME ]; then
-    export THEME="default"
+    export THEME="base16-atelierlakeside"
 fi
 
 if [ -z $BACKGROUND ]; then
     export BACKGROUND="dark"
 fi
 
-export BASE16_SHELL="$HOME/.config/base16-shell/base16-$THEME.$BACKGROUND.sh"
+export BASE16_SHELL="$HOME/.config/base16-shell/$THEME.$BACKGROUND.sh"
 source $BASE16_SHELL
 
 # tmux
