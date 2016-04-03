@@ -12,7 +12,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Base16 Shell
 if [ -z $THEME ]; then
-    export THEME="base16-atelierlakeside"
+    export THEME="base16-twilight"
 fi
 
 if [ -z $BACKGROUND ]; then
