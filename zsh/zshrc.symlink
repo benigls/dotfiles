@@ -34,10 +34,12 @@ if [ ! -s "$HOME/.virtualenvs" ]; then
     mkdir $HOME/.virtualenvs
 fi
 
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv-3.4`
-export VIRTUALENV_PYTHON=`which python3`
-export VIRTUALENVWRAPPER_PYTHON=`which python3`
-source /usr/local/bin/virtualenvwrapper.sh
+if [ -s /usr/local/bin/virtualenvwrapper.sh ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv-3.4`
+    export VIRTUALENV_PYTHON=`which python3`
+    export VIRTUALENVWRAPPER_PYTHON=`which python3`
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 unset config
