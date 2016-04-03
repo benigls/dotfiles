@@ -121,7 +121,7 @@ function theme() {
     elif [ ! "$@" ]; then
         echo "You didn't pass the theme name."
     else
-        export THEME=$1 && reload!
+        export THEME="base16-"$1 && reload!
     fi
 }
 
