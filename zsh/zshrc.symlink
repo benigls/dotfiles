@@ -19,7 +19,7 @@ if [ -z $BACKGROUND ]; then
     export BACKGROUND="dark"
 fi
 
-export BASE16_SHELL="$HOME/.config/base16-gnome-terminal/$THEME.$BACKGROUND.sh"
+export BASE16_SHELL="$HOME/.config/base16-shell/$THEME.$BACKGROUND.sh"
 source $BASE16_SHELL
 
 # tmux
