@@ -110,9 +110,10 @@ nnoremap ; :
 " clear highlighted search¬
 noremap <space> :set hlsearch! hlsearch?<cr>
 
+" TODO: Fix this not working
 " indentations
-nmap <leader>[ <<
-nmap <leader>] >>
+" nmap <leader>[ <<<cr>
+" nmap <leader>] >><cr>
 
 " Disalbe Arrow keys
 nnoremap <up>    <nop>
@@ -131,11 +132,13 @@ autocmd BufWritePre * :%s/\s\+$//e
 """""""""" Plugins
 
 " NERDTree
-let g:NERDTreeQuitOnOpen=0
-let NERDTreeShowHidden=1
+let g:NERDTreeQuitOnOpen = 0
+let NERDTreeShowHidden = 1
+
+nnoremap <C-q> :NERDTreeToggle<cr>
 
 " ctrlp
-let g:ctrlp_show_hidden=1
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = '.git\|node_modules\|bower_components\|__pycache__\|tmp\'
 
 " Airline
@@ -175,8 +178,9 @@ let g:syntastic_python_python_exec = '/usr/bin/python'
 " Emmet
 let g:user_emmet_leader_key='<C-D>'
 
+" TODO: Add key bindings
 " fugitive git bindings
-nnoremap <space>gs :Gstatus<CR>
-nnoremap <space>gd :Gdiff<CR>
-nnoremap <space>gps :Dispatch! git push<CR>
-nnoremap <space>gpl :Dispatch! git pull<CR>
+" nnoremap <space>gs :Gstatus<cr>
+" nnoremap <space>gd :Gdiff<CR>
+" nnoremap <space>gps :Dispatch! git push<CR>
+" nnoremap <space>gpl :Dispatch! git pull<CR>
