@@ -60,7 +60,7 @@ set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 set background=dark
 let base16colorspace=256
 execute "set background=".$BACKGROUND
-execute "colorscheme ".$THEME
+execute "colorscheme ".$THEME."-".$BACKGROUND
 
 set wrap "turn on line wrapping
 set wrapmargin=8 " wrap lines when coming within n characters from side
