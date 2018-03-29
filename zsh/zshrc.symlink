@@ -1,6 +1,5 @@
 export DOTFILES="$HOME/.dotfiles"
 export ZSH="$DOTFILES/zsh"
-export VAGRANT_FOLDER="$HOME/Code/Vagrant/"
 export REPO_FOLDER="$HOME/Code/Repositories/"
 export EDITOR="vim"
 

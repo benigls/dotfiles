@@ -10,7 +10,6 @@ alias .....="cd ../../../.."
 alias l="ls -la"
 alias ll="ls -l"
 alias llr="ls -1 $REPO_FOLDER"
-alias llv="ls -1 $VAGRANT_FOLDER"
 
 alias rmf="rm -rf"
 
