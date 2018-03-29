@@ -23,3 +23,6 @@ alias upg="sudo apt-get upgrade"
 alias up="upd && upg"
 
 alias v="vim"
+
+# docker
+alias dc="docker-compose"
