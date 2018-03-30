@@ -34,15 +34,6 @@ function md() {
     fi
 }
 
-# set the background color and them
-# TODO: Fix this shit
-function light() {
-    export BACKGROUND="light" && reload!
-}
-
-function dark() {
-    export BACKGROUND="dark" && reload!
-}
 
 function theme() {
     if [ "$#" -gt 1 ]; then
@@ -50,7 +41,8 @@ function theme() {
     elif [ ! "$@" ]; then
         echo "You didn't pass the theme name."
     else
-        export THEME="base16-"$1 && reload!
+        # @TODO: add validation if theme exist
+        export THEME=$1 && reload!
     fi
 }
 

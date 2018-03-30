@@ -11,14 +11,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # Base16 Shell
 if [ -z $THEME ]; then
-    export THEME="base16-default"
+    export THEME="default-dark"
 fi
 
-if [ -z $BACKGROUND ]; then
-    export BACKGROUND="dark"
-fi
-
-export BASE16_SHELL="$HOME/.config/base16-shell/$THEME.$BACKGROUND.sh"
+export BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-$THEME.sh"
 source $BASE16_SHELL
 
 # tmux
