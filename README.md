@@ -12,17 +12,19 @@ Still in progress.
 
 ## TODO
 
-- update color scheme
-- fix vim-airline
 - fix tab number on javascript and python
 - fix vim-surround not working
 - replace ctrlp with fzf
 - replace supertab with youcompleteme
+- replace nerdcommenter with vim-commentary
 - fix nerdcommenter
 - fix leader key
 - add vim-gitgutter
 - remove emmet
 - add jslint
+- add vim-polyglot
+- add airline syntastic integration
+- add airline fugitive integration
 
 - install Tmux Plugin Manager (tmux-plugins/tpm)
 - install tmux plugins

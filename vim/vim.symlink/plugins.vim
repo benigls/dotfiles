@@ -5,7 +5,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
-Plug 'vim-airline/vim-airline-themes' | Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes' | Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 Plug 'MarcWeber/vim-addon-mw-utils' | Plug 'tomtom/tlib_vim' | Plug 'garbas/vim-snipmate'
