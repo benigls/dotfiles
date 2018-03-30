@@ -21,3 +21,14 @@ Still in progress.
 - fix nerdcommenter
 - fix leader key
 - add vim-gitgutter
+- remove emmet
+- add jslint
+
+- install Tmux Plugin Manager (tmux-plugins/tpm)
+- install tmux plugins
+    - mshkrebtan/base16-tmux
+    - tmux-urlview
+    - tmux-fpp
+    - tmux-yank
+    - vim-tmux
+    - tmux-cpu
