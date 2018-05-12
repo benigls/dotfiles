@@ -18,6 +18,7 @@ set expandtab
 set ttyfast " faster redrawing
 set autoread " detect when a file is changed
 
+autocmd Filetype javascript setlocal et ts=2 sw=2 sts=2
 
 " make backspace behave in a sane manner¬
 set backspace=indent,eol,start

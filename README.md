@@ -25,6 +25,7 @@ Still in progress.
 - add vim-polyglot
 - add airline syntastic integration
 - add airline fugitive integration
+- add vim-repeat
 
 - install Tmux Plugin Manager (tmux-plugins/tpm)
 - install tmux plugins
