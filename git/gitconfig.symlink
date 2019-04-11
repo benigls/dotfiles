@@ -1,9 +1,9 @@
 [user]
-	email = "(none)"
-	name = Ben
-	username = benigls
+    email = "(none)"
+    name = Ben
+    username = benigls
 [push]
-	default = simple
+    default = simple
 [core]
     editor = vim
 [alias]
